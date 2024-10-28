@@ -1,0 +1,9 @@
+name: MyDemo Workflow
+on: push
+
+jobs:
+  DemoJob:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Say hi
+          run: echo "Hello Naveen"
