@@ -1,4 +1,4 @@
-name: Demo on workflow events
+name: 03-with-custom-function-to-print
 on: push
 jobs:
     Job1:

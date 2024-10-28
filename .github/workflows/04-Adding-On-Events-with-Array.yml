@@ -1,11 +1,11 @@
-name: Demo on workflow events
+name: 04-Demo-With-Multiple-Events
 on: 
  workflow_dispatch:
  push:
  schedule:
     - cron: '*/5 * * * *'   
  pull_request:
-    
+
 jobs:
     Job1:
         runs-on: ubuntu-latest
