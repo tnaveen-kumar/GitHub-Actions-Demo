@@ -1,0 +1,14 @@
+name: Demo on workflow events
+on: 
+ workflow_dispatch:
+ push:
+ schedule:
+    - cron: '*/5 * * * *'   
+ pull_request:
+    
+jobs:
+    Job1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print the trigger type using {{ github.event_name }}
+              run: echo "This is coming from ${{ github.event_name }}"
