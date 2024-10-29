@@ -1,0 +1,12 @@
+name: Demo On Env and Variables
+on: workflow_dispatch
+jobs:
+    job1:
+      environment: AWS
+      runs-on: ubuntu-latest
+      steps:
+        - name: Get the env variable secret
+          run: echo ${{ secrets.AWS_PASS }}
+
+        - name: Get the env variable secret
+          run: echo ${{ env.AWS_ENV }}
